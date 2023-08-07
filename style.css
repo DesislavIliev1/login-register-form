@@ -1,0 +1,242 @@
+@property --color-1{
+    syntax: "<color>";
+    inherits: true;
+    initial-value:rgba(133,160,166,1) ;
+}
+
+@property --color-2{
+    syntax: "<color>";
+    inherits: true;
+    initial-value:rgba(18,83,232,1) ;
+}
+
+.form{
+    background: grey;
+    padding: 50px;
+    margin: 50px;
+    margin-top: 50px;
+}
+
+
+body{
+    background-image: url(/pics/cool-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+input{
+    border-radius: 10px;
+    border: solid 2px;
+
+}
+
+.input-group label{
+    position: absolute;
+    top:50%;
+    left: 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.7s;
+
+}
+
+.input-group input{
+    background:transparent;
+    outline:none;
+}
+
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label{
+    z-index: 10;
+    top:25px;
+    font-size: 12px;
+    background: white;
+}
+
+.transition-fade{
+    opacity: 1;
+    transition: 1500ms;
+    transform:translateX(0) ;
+    transform-origin: left;
+
+
+}
+
+.btn{
+    --color-1:rgba(133,160,166,1);
+    --color-2:rgba(18,83,232,1);
+    position: absolute;
+    background: linear-gradient(90deg, var(--color-1) 0%, var(--color-2) 60%);
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    margin-left: -45px;
+    color:white;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    transition: --color-1 0.7s , --color-2 0.7s; 
+   
+}
+
+
+.btn:hover{
+    --color-1:rgba(18,83,232,1);
+    --color-2:rgba(133,160,166,1);
+    opacity: 0.9; 
+     
+    
+}
+
+.btn .btn-ripple{
+    background: rgba(255,255,255, 0.3);
+    position: absolute;
+    border-radius: 100%;
+    transform: scale(0);
+    animation: ripple 1s;
+}
+
+.nav-link-container{
+    margin-top: 30px;
+    margin-bottom:30px
+    
+  
+
+}
+ /* .card{
+    background: linear-gradient(315deg,#ffff 0%, #d7e1ec 74%);
+}  */
+
+.wrapper{
+    border-radius: 20px;
+    
+   
+}
+
+.wrapper .button{
+    
+    display: inline-block;
+    background: white;
+    overflow: hidden;
+    height: 45px;
+    width: 45px;
+    margin: 0 10px;
+    border-radius: 100%;
+    margin-top: 90px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button .icon{
+    display:inline-block;
+    text-align: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 45px;
+    transition: all 0.3s ease-out;
+
+}
+.wrapper .button:nth-child(1):hover .bi-facebook{
+    color:#4267B2
+}
+
+.wrapper .button:nth-child(2):hover .icon{
+    background: #1DA1F2;
+    color:white;
+}
+.wrapper .button:nth-child(3):hover .icon{
+    background: #E1306C;
+    color:white;
+}
+
+ .wrapper .button .icon svg{
+    line-height: 45px;
+} 
+
+.wrapper .button span{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 45px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+
+}
+
+.wrapper .button:nth-child(1) span{
+    color:#4267B2
+}
+.wrapper .button:nth-child(2) span{
+    color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span{
+    color: #E1306C;
+}
+
+
+
+.wrapper .button:hover{
+    width: 150px;
+    border-radius: 20px;
+}
+
+@keyframes ripple{
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+html.is-animating .transition-fade{
+    opacity:0;
+    transform: translateX(150%);
+    transition: 1500ms;
+}
+
+html.is-leaving .transition-fade{
+    transform: translateX(-150%);
+}
+
+/* input:invalid{
+    border-color: red;
+    animation: shake 0.4s ;
+} */
+
+@keyframes shake {
+    25%{
+        transform:translateX(-5px)
+    }
+    50%{
+        transform:translateX(5px)
+    }
+    100%{
+        transform:translateX(-5px)
+    }
+    
+}
+
+/* .transition-fade-right{ 
+    opacity: 1;
+    transition: 1500ms;
+    transform:translateX(0) ;
+    transform-origin: left;
+
+}
+
+html.is-animating .transition-fade-right{
+    opacity:0;
+    transform: translateX(-150%);
+    transition: 1500ms;
+}
+
+html.is-leaving .transition-fade-right{
+    transform: translateX(150%);
+}
+*/
+
+
+
