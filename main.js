@@ -81,4 +81,28 @@ $(function(){
        }
 
      });
+
+     toggleDivs();
+       
+     
   });
+
+  function toggleDivs(){
+    
+ $('.toggle-trigger').on('click',function(e){
+  e.stopImmediatePropagation()
+  var content = $(this).next(".toggle-area");
+  $('.toggle-area').not(content).slideUp();
+  $(this).closest('.toggle-wrap').find('.toggle-area').slideToggle();
+  
+
+  
+
+  // e.preventDefault();
+   
+  // $(this).closest('.toggle-wrap').find('.toggle-area').slideToggle();
+  
+
+ 
+ })
+}

@@ -18,7 +18,7 @@
 }
 
 
-body{
+.body{
     background-image: url(pics/cool-background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -200,6 +200,60 @@ html.is-animating .transition-fade{
 html.is-leaving .transition-fade{
     transform: translateX(-150%);
 }
+
+.col
+
+
+.toggle-wrap{
+    
+    
+    margin: 20px;
+   
+}
+.toggle-trigger{
+
+    display:inline block;
+    height: 80px;
+    width: 80px;
+    background: grey;
+    
+}
+
+.toggle-area{
+    height: 180px;
+    width: 180px;
+    background: gray;
+    display: none;
+    
+}
+
+#first{
+    display: block;
+}
+
+.eho{
+    background: pink;
+    display: flex;
+}
+
+
+
+
+
+
+/* .box-1:active{
+    transform: translateX(100px);
+    transform: translateY(100px);
+    transform: scale(10);
+    
+}  */
+
+
+   
+
+    
+
+
 
 /* input:invalid{
     border-color: red;
