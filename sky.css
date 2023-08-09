@@ -1,0 +1,147 @@
+/* background for the header- properties */
+.navbar{
+    height: 150px;
+    background-image:url(/pics/night.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.navbar-brand{
+    color: white;
+    font-size: 24px;
+}
+
+.wrapp span{
+    position: fixed;
+    top: -120px;
+    height:5px;
+    width: 5px;
+    border-radius: 100%;
+    background: white;
+    /* animation falling stars property  */
+    animation: fallingStars 1.5s linear infinite;
+
+}
+/* multiple spans - stars */
+.wrapp span:nth-child(1){
+    
+    left:60px;
+    animation-delay: 0.6s;
+
+
+}
+
+.wrapp span:nth-child(2){
+    left:60%;
+    animation-delay: 1s;
+
+}
+
+.wrapp span:nth-child(3){
+    left:20%;
+    animation-delay: 1.6s;
+
+}
+
+.wrapp span:nth-child(4){
+    left:30%;
+    animation-delay: 0.3s;
+
+}
+
+.wrapp span:nth-child(5){
+    left:40%;
+    animation-delay: 0.8s;
+
+}
+
+.wrapp span:nth-child(6){
+    left:50%;
+    animation-delay: 2s;
+
+}
+
+.wrapp span:nth-child(7){
+    left:80%;
+    animation-delay: 2.5s;
+
+}
+/* animation for falling stars */
+
+@keyframes fallingStars{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    80%{
+        
+        opacity: 0.2;
+    }
+
+    60%{
+        opacity:0.6;
+    }
+
+    40%{
+        opacity:0.8;
+    }
+
+    100%{
+        transform: translateY(250px);
+        
+        opacity:0;
+
+    }
+
+}
+
+.navigation{
+    margin:0;
+    padding: 0;
+    position: fixed;
+    right:28px;
+    list-style: none;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.navigation li{
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border: 2px solid #999;
+    border-radius: 50%;
+    margin-top:10px;
+    transition: all 0.2s;
+}
+
+.navigation li:hover, .navigation li.selected{
+    transform: scale(1.6);
+}
+
+section{
+    
+    height: 500px;
+}
+
+.section-1{
+    margin-top:150px;
+    background: #1DA1F2;
+
+}
+
+.section-2{
+    background: #32bb50;
+
+}
+
+.section-3{
+    background: #df934b;
+    
+}
+.section-4{
+    background: #cc6060;
+
+}

@@ -4,76 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>page</title>
+    <title>Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- <script defer src="https://unpkg.com/swup@4"></script>  -->
-    <!-- <script defer src="/node_modules/swup/dist/*"></script>  -->
-    <script defer src="/main.js"></script>
-    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="page.css">
+</head>
 
 <body>
     <div class="container">
         <div class="row eho">
-            <div class="col md-2">
+            <div class="col md-2 m-1">
                 <div class="toggle-wrap ">
-                    <div class="toggle-trigger">a</div>
-                    <div class="toggle-area" id="first"> fdsgsdgdsgsd</div>
+                    <!-- div that clicks  -->
+                    <div class="toggle-trigger text-center">DIV-1</div>
+                    <!-- hidden div that slides down when click the toggle-trigger -->
+                    <div class="toggle-area" id="first"> </div>
 
                 </div>
             </div>
-            <div class="col md-2">
+            <div class="col md-2 m-1">
                 <div class="toggle-wrap">
-                    <div class="toggle-trigger">a</div>
-                    <div class="toggle-area"> fdsgsdgdsgsd</div>
+                    <div class="toggle-trigger text-center">DIV-2</div>
+                    <div class="toggle-area"> </div>
 
                 </div>
             </div>
-            <div class="col md-2">
+            <div class="col md-2 m-1">
                 <div class="toggle-wrap">
-                    <div class="toggle-trigger">a</div>
-                    <div class="toggle-area"> fdsgsdgdsgsd</div>
+                    <div class="toggle-trigger text-center">DIV-3</div>
+                    <div class="toggle-area"> </div>
                 </div>
             </div>
 
 
-            <div class="col md-2">
+            <div class="col md-2 m-1">
                 <div class="toggle-wrap">
-                    <div class="toggle-trigger">a</div>
-                    <div class="toggle-area"> fdsgsdgdsgsd</div>
+                    <div class="toggle-trigger text-center">DIV-4</div>
+                    <div class="toggle-area"> </div>
 
                 </div>
             </div>
 
-            <div class="col md-2">
-                <div class="toggle-wrap">
-                    <div class="toggle-trigger">a</div>
-                    <div class="toggle-area"> fdsgsdgdsgsd</div>
-                </div>
-            </div>
 
 
-            <div class="col md-2">
-                <div class="toggle-wrap">
-                    <div class="toggle-trigger">a</div>
-                    <div class="toggle-area"> fdsgsdgdsgsd</div>
+            <!-- button that redirect to the next page with the sky header and scroll indicator -->
+            <button class="btn btn-warning">Click to See the Sky</button>
+            
 
-                </div>
-            </div>
+          
 
         </div>
     </div>
+         
     </div>
+   
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swup@4"></script>
-    <script> const swup = new Swup(); </script>
-    <script src="/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/page.js"></script>
+    
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+/* custom properties for colors - using it to make hover transition on the button */
 @property --color-1{
     syntax: "<color>";
     inherits: true;
@@ -31,6 +32,7 @@ input{
 
 }
 
+/* properties for floating labels */
 .input-group label{
     position: absolute;
     top:50%;
@@ -55,15 +57,8 @@ input{
     background: white;
 }
 
-.transition-fade{
-    opacity: 1;
-    transition: 1500ms;
-    transform:translateX(0) ;
-    transform-origin: left;
 
-
-}
-
+/* login register button properties */
 .btn{
     --color-1:rgba(133,160,166,1);
     --color-2:rgba(18,83,232,1);
@@ -90,12 +85,21 @@ input{
     
 }
 
+/* ripple button properties  */
 .btn .btn-ripple{
     background: rgba(255,255,255, 0.3);
     position: absolute;
     border-radius: 100%;
     transform: scale(0);
     animation: ripple 1s;
+}
+
+/* ripple animation */
+@keyframes ripple{
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
 }
 
 .nav-link-container{
@@ -105,10 +109,8 @@ input{
   
 
 }
- /* .card{
-    background: linear-gradient(315deg,#ffff 0%, #d7e1ec 74%);
-}  */
-
+ 
+/* social media buttons properties */
 .wrapper{
     border-radius: 20px;
     
@@ -184,11 +186,16 @@ input{
     border-radius: 20px;
 }
 
-@keyframes ripple{
-    100% {
-        transform: scale(2);
-        opacity: 0;
-    }
+
+
+/* properties for page transition using swup */
+.transition-fade{
+    opacity: 1;
+    transition: 1500ms;
+    transform:translateX(0) ;
+    transform-origin: left;
+
+
 }
 
 html.is-animating .transition-fade{
@@ -201,65 +208,7 @@ html.is-leaving .transition-fade{
     transform: translateX(-150%);
 }
 
-.col
-
-
-.toggle-wrap{
-    
-    
-    margin: 20px;
-   
-}
-.toggle-trigger{
-
-    display:inline block;
-    height: 80px;
-    width: 80px;
-    background: grey;
-    
-}
-
-.toggle-area{
-    height: 180px;
-    width: 180px;
-    background: gray;
-    display: none;
-    
-}
-
-#first{
-    display: block;
-}
-
-.eho{
-    background: pink;
-    display: flex;
-}
-
-
-
-
-
-
-/* .box-1:active{
-    transform: translateX(100px);
-    transform: translateY(100px);
-    transform: scale(10);
-    
-}  */
-
-
-   
-
-    
-
-
-
-/* input:invalid{
-    border-color: red;
-    animation: shake 0.4s ;
-} */
-
+/* shake animation for input fields */
 @keyframes shake {
     25%{
         transform:translateX(-5px)
@@ -273,24 +222,7 @@ html.is-leaving .transition-fade{
     
 }
 
-/* .transition-fade-right{ 
-    opacity: 1;
-    transition: 1500ms;
-    transform:translateX(0) ;
-    transform-origin: left;
 
-}
-
-html.is-animating .transition-fade-right{
-    opacity:0;
-    transform: translateX(-150%);
-    transition: 1500ms;
-}
-
-html.is-leaving .transition-fade-right{
-    transform: translateX(150%);
-}
-*/
 
 
 

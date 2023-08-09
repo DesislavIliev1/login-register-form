@@ -3,6 +3,82 @@
 
 $(function(){
 
+//calling ripple function
+  rippleEffect();
+
+  //calling login function
+  loginValidation();
+
+//calling register function
+  registerValidation();
+
+    
+       
+     
+  });
+  // function that checks if the logun input is valid
+  function loginValidation(){
+    $('.btn-login').on('click', function(){
+      //storing the inputs in variables
+      let logUsername = $('.log-username').val();
+      let logPassword = $('.log-password').val();
+      // check if the username is at least 6 digits - if its not the hover turn red and shake
+      if(logUsername.length < 6){
+        $('.log-username').css({"border-color":"red", "animation":"shake 0.4s" });
+       }
+       // check if the password is at least 6 digits - if its not the hover turn red and shake
+       else if(logPassword.length < 6){
+        $('.log-password').css({"border-color":"red", "animation":"shake 0.4s" });
+      }
+      //if the username and the password cover the requirements log to the page
+      else{
+        $(location).attr("href" ,"/page.html");
+       
+
+       }
+
+     });
+
+  }
+
+ // function that checks if the register input is valid
+  function registerValidation(){
+
+    $('.btn-register').on('click', function(){
+      //storing the register input in variables
+      let username = $('.reg-username').val();
+      let email = $('.reg-email').val();
+      let phone = $('.reg-phone').val();
+      let password = $('.reg-password').val();
+      //regex that check for numbers
+      let regex = /\D/;
+ // check if the username is at least 6 digits - if its not the hover turn red and shake
+      if(username.length < 6){
+        $('.reg-username').css({"border-color":"red", "animation":"shake 0.4s" });
+       }
+  // check if the email is valid (check if includes '@') - if its not the hover turn red and shake
+       else if((!email.includes("@")) || (email.length < 5)){
+        $('.reg-email').css({"border-color":"red", "animation":"shake 0.4s" });
+      }
+  // check if the phone is valid (contains only numbers) - if its not the hover turn red and shake
+      else if(regex.test(phone)){
+        $('.reg-phone').css({"border-color":"red", "animation":"shake 0.4s" });
+      }
+    // check if the password valid is at least 6 digits - if its not the hover turn red and shake
+      else if(password.length < 6){
+        $('.reg-password').css({"border-color":"red", "animation":"shake 0.4s" })
+      }
+    //if all the inputs cover the requirements pop-up appears
+      else{
+        Swal.fire({
+          icon: 'success',
+          title:"Successfully registered"});}
+      
+    })
+
+  }
+
+  function rippleEffect(){
     //creating a style object for the ripple effect
     function RippleStyle(width, height, posX, posY){
       this.width = ( width <= height ) ? height : width;
@@ -36,73 +112,5 @@ $(function(){
       $(this).remove();
     });
 
+  }
 
-    $('.btn-register').on('click', function(){
-      let username = $('.reg-username').val();
-      let email = $('.reg-email').val();
-      let phone = $('.reg-phone').val();
-      let password = $('.reg-password').val();
-      let regex = /\D/;
-
-      if(username.length < 6){
-        $('.reg-username').css({"border-color":"red", "animation":"shake 0.4s" });
-       }
-       else if((!email.includes("@")) || (email.length < 5)){
-        $('.reg-email').css({"border-color":"red", "animation":"shake 0.4s" });
-
-      }
-      else if(regex.test(phone)){
-        $('.reg-phone').css({"border-color":"red", "animation":"shake 0.4s" });
-      }
-      else if(password.length < 6){
-        $('.reg-password').css({"border-color":"red", "animation":"shake 0.4s" })
-      }
-      else{
-        Swal.fire({
-          icon: 'success',
-          title:"Successfully registered"});}
-      
-    })
-
-
-    $('.btn-login').on('click', function(){
-      let logUsername = $('.log-username').val();
-      let logPassword = $('.log-password').val();
-      if(logUsername.length < 6){
-        $('.log-username').css({"border-color":"red", "animation":"shake 0.4s" });
-       }
-       else if(logPassword.length < 6){
-        $('.log-password').css({"border-color":"red", "animation":"shake 0.4s" });
-      }
-      else{
-        $(location).attr("href" ,"/page.html");
-       
-
-       }
-
-     });
-
-     toggleDivs();
-       
-     
-  });
-
-  function toggleDivs(){
-    
- $('.toggle-trigger').on('click',function(e){
-  e.stopImmediatePropagation()
-  var content = $(this).next(".toggle-area");
-  $('.toggle-area').not(content).slideUp();
-  $(this).closest('.toggle-wrap').find('.toggle-area').slideToggle();
-  
-
-  
-
-  // e.preventDefault();
-   
-  // $(this).closest('.toggle-wrap').find('.toggle-area').slideToggle();
-  
-
- 
- })
-}
